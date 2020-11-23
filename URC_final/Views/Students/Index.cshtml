@@ -1,0 +1,131 @@
+﻿@model IEnumerable<URC_final.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAddress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Resume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DegreePlan)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GPA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HoursPerWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.personalStatement)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExpectedGraduationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ApplicationDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentSkills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentCompletedCourses)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentInterests)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberOfApply)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AppliedOpportunities)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Resume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DegreePlan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GPA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoursPerWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.personalStatement)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpectedGraduationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApplicationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentSkills)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentCompletedCourses)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentInterests)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumberOfApply)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AppliedOpportunities)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Uid">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Uid">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Uid">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

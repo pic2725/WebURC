@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "URC_final_Context"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "Student_final_Context"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "UserRoleDB_final_ContextConnection"
+    }
+  }
+}
